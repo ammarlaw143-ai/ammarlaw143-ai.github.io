@@ -1,0 +1,646 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Minecraft Hub</title>
+
+<meta name="google-adsense-account" content="ca-pub-3595791569047109">
+  
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-B7VQSWG04J"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-B7VQSWG04J');
+</script>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="controllers">
+<span>🎮</span>
+<span>🎮</span>
+<span>🎮</span>
+<span>🎮</span>
+<span>🎮</span>
+<span>🎮</span>
+</div>
+
+<nav class="navbar">
+<a href="index.html">🏠 Home</a>
+<a href="minecraft.html">⛏ Minecraft</a>
+<a href="downloads.html">📥 Downloads</a>
+<a href="contact.html">📞 Contact</a>
+</nav>
+
+<header class="hero">
+<h1>⛏ MINECRAFT COMMAND CENTER</h1>
+<p>Commands • Tutorials • Addons • Maps</p>
+
+<input
+id="search"
+placeholder="Search commands..."
+onkeyup="searchGames()">
+</header>
+
+<section class="games">
+
+<div class="game-card">
+<h2>🎮 Creative Mode</h2>
+<p>/gamemode creative</p>
+</div>
+
+<div class="game-card">
+<h2>🛡 Survival Mode</h2>
+<p>/gamemode survival</p>
+</div>
+
+<div class="game-card">
+<h2>💎 Give Diamond Sword</h2>
+<p>/give @p diamond_sword 1</p>
+</div>
+
+<div class="game-card">
+<h2>⚡ Speed Effect</h2>
+<p>/effect give @p speed 99999 5</p>
+</div>
+
+<div class="game-card">
+<h2>☀ Set Day</h2>
+<p>/time set day</p>
+</div>
+
+<div class="game-card">
+<h2>🌙 Set Night</h2>
+<p>/time set night</p>
+</div>
+
+<div class="game-card">
+<h2>🌧 Weather Rain</h2>
+<p>/weather rain</p>
+</div>
+
+<div class="game-card">
+<h2>☀ Weather Clear</h2>
+<p>/weather clear</p>
+</div>
+
+<div class="game-card">
+<h2>📍 Teleport</h2>
+<p>/tp @p 100 70 100</p>
+</div>
+
+<div class="game-card">
+<h2>⭐ XP Levels</h2>
+<p>/xp add @p 100 levels</p>
+</div>
+
+<div class="game-card">
+<h2>🔥 Fire Resistance</h2>
+<p>/effect give @p fire_resistance 99999</p>
+</div>
+
+<div class="game-card">
+<h2>🧲 Summon Iron Golem</h2>
+<p>/summon iron_golem</p>
+</div>
+
+<div class="game-card">
+<h2>🐉 Summon Ender Dragon</h2>
+<p>/summon ender_dragon</p>
+</div>
+
+<div class="game-card">
+<h2>🐺 Summon Wolf</h2>
+<p>/summon wolf</p>
+</div>
+
+<div class="game-card">
+<h2>💀 Summon Wither</h2>
+<p>/summon wither</p>
+</div>
+</section>
+  
+  <button
+id="moreBtn"
+class="btn"
+onclick="showMoreCommands()">
+
+📜 Show More Commands
+
+</button>
+
+  <section class="games">
+
+<div id="moreCommands">
+    
+  <div class="game-card">
+<h2>🎮 Adventure Mode</h2>
+<p>/gamemode adventure</p>
+</div>
+
+<div class="game-card">
+<h2>👻 Spectator Mode</h2>
+<p>/gamemode spectator</p>
+</div>
+
+<div class="game-card">
+<h2>☀ Noon Time</h2>
+<p>/time set noon</p>
+</div>
+
+<div class="game-card">
+<h2>🌑 Midnight Time</h2>
+<p>/time set midnight</p>
+</div>
+
+<div class="game-card">
+<h2>⚡ Thunder Weather</h2>
+<p>/weather thunder</p>
+</div>
+
+<div class="game-card">
+<h2>😌 Peaceful Difficulty</h2>
+<p>/difficulty peaceful</p>
+</div>
+
+<div class="game-card">
+<h2>😎 Easy Difficulty</h2>
+<p>/difficulty easy</p>
+</div>
+
+<div class="game-card">
+<h2>💀 Hard Difficulty</h2>
+<p>/difficulty hard</p>
+</div>
+
+<div class="game-card">
+<h2>💎 Give Diamonds</h2>
+<p>/give @p diamond 64</p>
+</div>
+
+<div class="game-card">
+<h2>💚 Give Emeralds</h2>
+<p>/give @p emerald 64</p>
+</div>
+
+<div class="game-card">
+<h2>🟫 Give Netherite</h2>
+<p>/give @p netherite_ingot 64</p>
+</div>
+
+<div class="game-card">
+<h2>🍎 Golden Apples</h2>
+<p>/give @p golden_apple 64</p>
+</div>
+
+<div class="game-card">
+<h2>✨ Enchanted Apples</h2>
+<p>/give @p enchanted_golden_apple 64</p>
+</div>
+
+<div class="game-card">
+<h2>🏹 Bow</h2>
+<p>/give @p bow 1</p>
+</div>
+
+<div class="game-card">
+<h2>🏹 Arrows</h2>
+<p>/give @p arrow 64</p>
+</div>
+
+<div class="game-card">
+<h2>🪽 Elytra</h2>
+<p>/give @p elytra 1</p>
+</div>
+
+<div class="game-card">
+<h2>🔱 Trident</h2>
+<p>/give @p trident 1</p>
+</div>
+
+<div class="game-card">
+<h2>🛡 Shield</h2>
+<p>/give @p shield 1</p>
+</div>
+
+<div class="game-card">
+<h2>⚔ Sharpness V</h2>
+<p>/enchant @p sharpness 5</p>
+</div>
+
+<div class="game-card">
+<h2>⛏ Efficiency V</h2>
+<p>/enchant @p efficiency 5</p>
+</div>
+
+<div class="game-card">
+<h2>🍀 Fortune III</h2>
+<p>/enchant @p fortune 3</p>
+</div>
+
+<div class="game-card">
+<h2>♾ Unbreaking III</h2>
+<p>/enchant @p unbreaking 3</p>
+</div>
+
+<div class="game-card">
+<h2>🔧 Mending</h2>
+<p>/enchant @p mending 1</p>
+</div>
+
+<div class="game-card">
+<h2>💥 Power V</h2>
+<p>/enchant @p power 5</p>
+</div>
+
+<div class="game-card">
+<h2>📍 Teleport Spawn</h2>
+<p>/tp @p 0 100 0</p>
+</div>
+
+<div class="game-card">
+<h2>🏘 Locate Village</h2>
+<p>/locate village</p>
+</div>
+
+<div class="game-card">
+<h2>🏰 Locate Stronghold</h2>
+<p>/locate stronghold</p>
+</div>
+
+<div class="game-card">
+<h2>🕳 Ancient City</h2>
+<p>/locate ancient_city</p>
+</div>
+
+<div class="game-card">
+<h2>🔥 Nether Fortress</h2>
+<p>/locate fortress</p>
+</div>
+
+<div class="game-card">
+<h2>🐴 Summon Horse</h2>
+<p>/summon horse</p>
+</div>
+
+<div class="game-card">
+<h2>🐝 Summon Bee</h2>
+<p>/summon bee</p>
+</div>
+
+<div class="game-card">
+<h2>🦊 Summon Fox</h2>
+<p>/summon fox</p>
+</div>
+
+<div class="game-card">
+<h2>🐼 Summon Panda</h2>
+<p>/summon panda</p>
+</div>
+
+<div class="game-card">
+<h2>🐪 Summon Camel</h2>
+<p>/summon camel</p>
+</div>
+
+<div class="game-card">
+<h2>✨ Summon Allay</h2>
+<p>/summon allay</p>
+</div>
+
+<div class="game-card">
+<h2>👹 Summon Warden</h2>
+<p>/summon warden</p>
+</div>
+
+<div class="game-card">
+<h2>🎒 Keep Inventory</h2>
+<p>/gamerule keepInventory true</p>
+</div>
+
+<div class="game-card">
+<h2>☀ Stop Day Cycle</h2>
+<p>/gamerule doDaylightCycle false</p>
+</div>
+
+<div class="game-card">
+<h2>🌧 Stop Weather Cycle</h2>
+<p>/gamerule doWeatherCycle false</p>
+</div>
+
+<div class="game-card">
+<h2>🧟 Stop Mob Spawning</h2>
+<p>/gamerule doMobSpawning false</p>
+</div>
+
+<div class="game-card">
+<h2>💀 Kill Zombies</h2>
+<p>/kill @e[type=zombie]</p>
+</div>
+
+<div class="game-card">
+<h2>💥 Kill Creepers</h2>
+<p>/kill @e[type=creeper]</p>
+</div>
+
+<div class="game-card">
+<h2>🧱 Fill Stone Area</h2>
+<p>/fill ~1 ~1 ~1 ~10 ~10 ~10 stone</p>
+</div>
+
+<div class="game-card">
+<h2>🪟 Fill Glass Area</h2>
+<p>/fill ~1 ~1 ~1 ~10 ~10 ~10 glass</p>
+</div>
+
+<div class="game-card">
+<h2>📋 Clone Structure</h2>
+<p>/clone ~1 ~1 ~1 ~10 ~10 ~10 ~20 ~20 ~20</p>
+</div>
+
+<div class="game-card">
+<h2>🧹 Clear Inventory</h2>
+<p>/clear @p</p>
+</div>
+
+<div class="game-card">
+<h2>🌍 World Seed</h2>
+<p>/seed</p>
+</div>
+
+<div class="game-card">
+<h2>❓ Help Menu</h2>
+<p>/help</p>
+</div>
+
+<div class="game-card">
+<h2>👥 Online Players</h2>
+<p>/list</p>
+</div>
+
+<div class="game-card">
+<h2>💬 Chat Message</h2>
+<p>/me Hello World</p>
+</div>
+
+<div class="game-card">
+<h2>📢 Welcome Title</h2>
+<p>/title @p title {"text":"Welcome!"}</p>
+</div>
+
+<div class="game-card">
+<h2>🔊 Level Up Sound</h2>
+<p>/playsound minecraft:entity.player.levelup master @p</p>
+</div>
+
+<div class="game-card">
+<h2>🔇 Stop Sounds</h2>
+<p>/stopsound @p</p>
+</div>
+
+<div class="game-card">
+<h2>💎 Diamond Block</h2>
+<p>/setblock ~ ~ ~ diamond_block</p>
+</div>
+
+  <div class="game-card">
+<h2>🟩 Give Command Block</h2>
+<p>/give @p command_block</p>
+</div>
+
+<div class="game-card">
+<h2>🧨 Give TNT</h2>
+<p>/give @p tnt 64</p>
+</div>
+
+<div class="game-card">
+<h2>💡 Give Sea Lantern</h2>
+<p>/give @p sea_lantern 64</p>
+</div>
+
+<div class="game-card">
+<h2>🌋 Give Lava Bucket</h2>
+<p>/give @p lava_bucket</p>
+</div>
+
+<div class="game-card">
+<h2>💧 Give Water Bucket</h2>
+<p>/give @p water_bucket</p>
+</div>
+
+<div class="game-card">
+<h2>🪙 Give Gold Blocks</h2>
+<p>/give @p gold_block 64</p>
+</div>
+
+<div class="game-card">
+<h2>💎 Give Diamond Blocks</h2>
+<p>/give @p diamond_block 64</p>
+</div>
+
+<div class="game-card">
+<h2>🟪 Give Beacon</h2>
+<p>/give @p beacon</p>
+</div>
+
+<div class="game-card">
+<h2>🎆 Give Fireworks</h2>
+<p>/give @p firework_rocket 64</p>
+</div>
+
+<div class="game-card">
+<h2>🪓 Netherite Axe</h2>
+<p>/give @p netherite_axe</p>
+</div>
+
+<div class="game-card">
+<h2>⛏ Netherite Pickaxe</h2>
+<p>/give @p netherite_pickaxe</p>
+</div>
+
+<div class="game-card">
+<h2>⚔ Netherite Sword</h2>
+<p>/give @p netherite_sword</p>
+</div>
+
+<div class="game-card">
+<h2>🛡 Netherite Chestplate</h2>
+<p>/give @p netherite_chestplate</p>
+</div>
+
+<div class="game-card">
+<h2>👑 Give Totem</h2>
+<p>/give @p totem_of_undying</p>
+</div>
+
+<div class="game-card">
+<h2>📦 Give Shulker Box</h2>
+<p>/give @p shulker_box</p>
+</div>
+
+<div class="game-card">
+<h2>🐱 Summon Cat</h2>
+<p>/summon cat</p>
+</div>
+
+<div class="game-card">
+<h2>🐮 Summon Cow</h2>
+<p>/summon cow</p>
+</div>
+
+<div class="game-card">
+<h2>🐷 Summon Pig</h2>
+<p>/summon pig</p>
+</div>
+
+<div class="game-card">
+<h2>🐔 Summon Chicken</h2>
+<p>/summon chicken</p>
+</div>
+
+<div class="game-card">
+<h2>🐑 Summon Sheep</h2>
+<p>/summon sheep</p>
+</div>
+
+<div class="game-card">
+<h2>🧟 Summon Zombie</h2>
+<p>/summon zombie</p>
+</div>
+
+<div class="game-card">
+<h2>🏹 Summon Skeleton</h2>
+<p>/summon skeleton</p>
+</div>
+
+<div class="game-card">
+<h2>🕷 Summon Spider</h2>
+<p>/summon spider</p>
+</div>
+
+<div class="game-card">
+<h2>💥 Summon Creeper</h2>
+<p>/summon creeper</p>
+</div>
+
+<div class="game-card">
+<h2>👻 Summon Ghast</h2>
+<p>/summon ghast</p>
+</div>
+
+<div class="game-card">
+<h2>🔥 Summon Blaze</h2>
+<p>/summon blaze</p>
+</div>
+
+<div class="game-card">
+<h2>📍 Set Spawnpoint</h2>
+<p>/spawnpoint @p</p>
+</div>
+
+<div class="game-card">
+<h2>🌍 Set World Spawn</h2>
+<p>/setworldspawn</p>
+</div>
+
+<div class="game-card">
+<h2>🎵 Play Music</h2>
+<p>/playsound minecraft:music.overworld master @p</p>
+</div>
+
+<div class="game-card">
+<h2>📢 Big Title</h2>
+<p>/title @a title {"text":"Welcome Gamers!"}</p>
+</div>
+
+</section>
+
+<section class="videos">
+
+<h1>🤖 Minecraft Helper</h1>
+
+<div class="game-card">
+
+</div>
+
+<input
+id="question"
+placeholder="Ask about Minecraft commands">
+
+<br><br>
+
+<button
+class="btn"
+onclick="askMinecraft()">
+
+Ask
+
+</button>
+
+<p id="answer"></p>
+
+</div>
+
+</section>
+
+<section class="videos">
+
+<h1>📥 Downloads</h1>
+
+<div class="game-card">
+<h2>🧩 Minecraft Addons</h2>
+<p>Download addons from MCPEDL</p>
+
+<a
+href="https://mcpedl.com/"
+target="_blank"
+class="btn">
+
+DOWNLOAD ADDONS
+
+</a>
+</div>
+
+<div class="game-card">
+<h2>🏰 Minecraft Maps</h2>
+
+<a
+href="https://www.planetminecraft.com/projects/"
+target="_blank"
+class="btn">
+
+DOWNLOAD MAPS
+
+</a>
+
+</div>
+
+<div class="game-card">
+<h2>🎨 Resource Packs</h2>
+
+<a
+href="https://www.curseforge.com/minecraft/texture-packs"
+target="_blank"
+class="btn">
+
+RESOURCE PACKS
+
+</a>
+
+</div>
+
+</section>
+
+<footer>
+<p>© Minecraft Hub 2026</p>
+</footer>
+
+<script src="script.js"></script>
+
+</body>
+</html>
