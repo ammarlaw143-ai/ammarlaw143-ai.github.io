@@ -1,0 +1,714 @@
+/* ===== GAMING COMMAND CENTER ===== */
+
+
+html, body{
+width:100%;
+overflow-x:hidden;
+}
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+font-family:Arial,sans-serif;
+color:white;
+overflow-x:hidden;
+
+background:linear-gradient(
+-45deg,
+#050816,
+#1a1a2e,
+#16213e,
+#0f3460,
+#1f4068
+);
+
+}
+
+@keyframes gradientMove{
+
+0%{
+background-position:0% 50%;
+}
+
+50%{
+background-position:100% 50%;
+}
+
+100%{
+background-position:0% 50%;
+}
+
+}
+
+@keyframes gamingBG{
+
+0%{
+background-position:0% 50%;
+}
+
+50%{
+background-position:100% 50%;
+}
+
+100%{
+background-position:0% 50%;
+}
+
+}
+
+@keyframes bgMove{
+0%{background-position:0% 50%;}
+50%{background-position:100% 50%;}
+100%{background-position:0% 50%;}
+}
+
+color:white;
+}
+);
+
+background-attachment:fixed;
+}
+
+@keyframes bgMove{
+0%{background-position:0% 50%;}
+50%{background-position:100% 50%;}
+100%{background-position:0% 50%;}
+}
+
+/* NAVBAR */
+
+.navbar{
+position:sticky;
+top:0;
+z-index:999;
+
+display:flex;
+justify-content:center;
+flex-wrap:wrap;
+gap:20px;
+
+padding:15px;
+
+background:rgba(0,0,0,.7);
+backdrop-filter:blur(10px);
+
+position:sticky;
+top:0;
+z-index:1000;
+}
+
+.navbar a{
+color:white;
+text-decoration:none;
+font-weight:bold;
+transition:.3s;
+}
+
+.navbar a:hover{
+color:#00d4ff;
+text-shadow:0 0 15px #00d4ff;
+}
+
+/* HERO */
+
+.hero{
+text-align:center;
+padding:100px 20px;
+}
+
+.hero h1{
+font-size:70px;
+
+text-shadow:
+0 0 10px #00d4ff,
+0 0 20px #00d4ff,
+0 0 40px #00d4ff,
+0 0 80px #00d4ff;
+
+animation:glow 2s infinite alternate;
+}
+
+.hero p{
+font-size:22px;
+margin-top:15px;
+margin-bottom:30px;
+}
+
+@keyframes glow{
+from{
+text-shadow:
+0 0 10px #00d4ff,
+0 0 20px #00d4ff;
+}
+
+to{
+text-shadow:
+0 0 20px #ff00ff,
+0 0 40px #ff00ff,
+0 0 80px #ff00ff;
+}
+}
+
+/* SEARCH */
+
+#search{
+width:80%;
+max-width:600px;
+
+padding:18px;
+
+border:none;
+border-radius:50px;
+
+font-size:18px;
+
+outline:none;
+
+box-shadow:
+0 0 10px #00d4ff,
+0 0 30px #00d4ff;
+}
+
+/* STATS */
+
+.stats{
+display:flex;
+justify-content:center;
+flex-wrap:wrap;
+gap:30px;
+
+padding:40px;
+}
+
+.stat{
+background:rgba(255,255,255,.08);
+padding:25px;
+border-radius:20px;
+
+min-width:200px;
+
+text-align:center;
+
+box-shadow:
+0 0 15px #00d4ff;
+}
+
+.stat h2{
+font-size:50px;
+color:#00ffcc;
+}
+
+/* GAME GRID */
+
+.games{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:30px;
+
+padding:40px;
+}
+
+/* CARDS */
+
+.card,
+.game-card{
+
+background:
+rgba(25,25,40,0.85);
+
+backdrop-filter:blur(10px);
+
+border:
+2px solid rgba(0,212,255,0.5);
+
+border-radius:20px;
+
+padding:25px;
+
+margin:20px;
+
+text-align:center;
+
+box-shadow:
+0 0 20px rgba(0,212,255,.3);
+
+transition:.4s;
+
+}
+
+.card:hover,
+.game-card:hover{
+
+transform:
+translateY(-10px);
+
+border-color:
+#ff00ff;
+
+box-shadow:
+0 0 30px rgba(255,0,255,.6);
+
+  box-sizing:border-box;
+overflow:hidden;
+
+}
+
+/* BUTTONS */
+
+.btn{
+display:inline-block;
+
+margin-top:20px;
+
+padding:12px 24px;
+
+background:#5865F2;
+
+color:white;
+
+text-decoration:none;
+
+border-radius:10px;
+
+font-weight:bold;
+
+transition:0.3s;
+}
+
+.btn:hover{
+background:#4752C4;
+transform:scale(1.05);
+}
+
+/* VIDEOS */
+
+.videos{
+padding:40px;
+text-align:center;
+}
+
+.videos h1{
+margin-bottom:30px;
+}
+
+/* FOOTER */
+
+footer{
+text-align:center;
+padding:30px;
+background:rgba(0,0,0,.5);
+margin-top:50px;
+}
+
+/* FALLING CONTROLLERS */
+
+.controllers{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+overflow:hidden;
+pointer-events:none;
+z-index:-1;
+}
+
+.controllers span{
+position:absolute;
+font-size:40px;
+animation:fall linear infinite;
+opacity:.35;
+}
+
+.controllers span:nth-child(1){
+left:5%;
+animation-duration:8s;
+}
+
+.controllers span:nth-child(2){
+left:20%;
+animation-duration:12s;
+}
+
+.controllers span:nth-child(3){
+left:35%;
+animation-duration:10s;
+}
+
+.controllers span:nth-child(4){
+left:50%;
+animation-duration:14s;
+}
+
+.controllers span:nth-child(5){
+left:70%;
+animation-duration:9s;
+}
+
+.controllers span:nth-child(6){
+left:90%;
+animation-duration:11s;
+}
+
+@keyframes fall{
+0%{
+transform:translateY(-100px) rotate(0deg);
+}
+100%{
+transform:translateY(120vh) rotate(360deg);
+}
+}
+
+/* MOBILE */
+
+@media(max-width:768px){
+
+.hero h1{
+font-size:40px;
+}
+
+.navbar{
+gap:10px;
+}
+
+#search{
+width:95%;
+}
+
+}
+#moreBtn{
+display:block;
+margin:30px auto;
+font-size:20px;
+}
+
+#moreCommands{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:30px;
+padding:40px;
+}
+
+#moreCommands{
+display:none;
+}
+
+#moreGTA{
+display:none;
+}
+
+#gtaBtn{
+display:block;
+margin:30px auto;
+font-size:20px;
+}
+
+#moreGTA{
+display:none;
+}
+
+
+#moreFortnite{
+display:none;
+}
+
+#gtaBtn,
+#fortniteBtn,
+#moreBtn{
+display:block;
+margin:40px auto;
+padding:15px 35px;
+font-size:20px;
+font-weight:bold;
+background:linear-gradient(45deg,#00ff88,#00d4ff);
+color:white;
+border:none;
+border-radius:12px;
+cursor:pointer;
+box-shadow:0 0 15px #00ff88;
+transition:0.3s;
+}
+
+#gtaBtn,
+#fortniteBtn,
+#moreBtn{
+display:block !important;
+width:300px;
+margin:40px auto !important;
+text-align:center;
+}
+
+.downloads-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+gap:25px;
+padding:30px;
+}
+
+.card{
+background:rgba(0,0,0,.5);
+border:2px solid #00d4ff;
+border-radius:20px;
+padding:20px;
+text-align:center;
+box-shadow:0 0 20px #00d4ff;
+}
+
+@media(max-width:768px){
+
+.hero h1{
+color:#00d4ff;
+
+text-shadow:
+0 0 10px #00d4ff,
+0 0 20px #00d4ff,
+0 0 40px #7c3aed;
+
+font-size:60px;
+}
+
+.navbar{
+background:rgba(0,0,0,.8);
+
+backdrop-filter:blur(10px);
+
+border-bottom:
+2px solid #00d4ff;
+}
+
+.games{
+grid-template-columns:1fr;
+}
+
+.card{
+margin:10px;
+}
+
+#search{
+width:95%;
+}
+
+}
+
+body::before{
+content:"";
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+
+background:
+radial-gradient(
+circle at top left,
+rgba(0,212,255,.12),
+transparent 40%
+),
+
+radial-gradient(
+circle at bottom right,
+rgba(168,85,247,.12),
+transparent 40%
+);
+
+pointer-events:none;
+z-index:-1;
+}
+
+body::before{
+content:"";
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+
+background:
+radial-gradient(circle at 20% 20%,
+rgba(0,255,255,.08),
+transparent 30%),
+
+radial-gradient(circle at 80% 80%,
+rgba(255,0,255,.08),
+transparent 30%),
+
+radial-gradient(circle at 50% 50%,
+rgba(0,255,100,.05),
+transparent 35%);
+
+pointer-events:none;
+z-index:-1;
+}
+
+body::before{
+content:"";
+
+position:fixed;
+
+top:0;
+left:0;
+
+width:100%;
+height:100%;
+
+background:
+
+radial-gradient(
+circle at 20% 20%,
+rgba(0,255,255,.10),
+transparent 25%
+),
+
+radial-gradient(
+circle at 80% 80%,
+rgba(255,0,255,.10),
+transparent 25%
+),
+
+radial-gradient(
+circle at 50% 50%,
+rgba(0,255,100,.08),
+transparent 30%
+);
+
+animation:
+lightsMove 12s infinite alternate;
+
+pointer-events:none;
+
+z-index:-1;
+}
+
+@keyframes lightsMove{
+
+from{
+transform:translate(0,0);
+}
+
+to{
+transform:translate(50px,-50px);
+}
+
+}
+
+
+img{
+display:block;
+}
+
+.logo{
+display:block;
+}
+
+img{
+display:block;
+margin-left:auto;
+margin-right:auto;
+}
+
+#moreCOD{
+display:none;
+}
+
+#codBtn{
+display:block;
+margin:40px auto;
+padding:15px 35px;
+font-size:20px;
+font-weight:bold;
+
+background:linear-gradient(
+45deg,
+#00d4ff,
+#7c3aed
+);
+
+color:white;
+border:none;
+border-radius:12px;
+cursor:pointer;
+
+box-shadow:
+0 0 15px #00d4ff,
+0 0 30px #7c3aed;
+
+transition:.3s;
+}
+
+#codBtn:hover{
+transform:scale(1.08);
+
+box-shadow:
+0 0 25px #00d4ff,
+0 0 50px #7c3aed;
+}
+
+
+
+#morePUBG{
+display:none;
+}
+
+.pubg-btn{
+display:block;
+margin:40px auto;
+padding:16px 35px;
+
+background:linear-gradient(
+45deg,
+#ff9800,
+#ff3d00,
+#ff9800
+);
+
+background-size:200% 200%;
+
+color:white;
+font-size:20px;
+font-weight:bold;
+
+border:none;
+border-radius:50px;
+
+cursor:pointer;
+
+box-shadow:
+0 0 15px #ff9800,
+0 0 30px #ff3d00;
+
+animation:
+buttonGlow 3s linear infinite;
+
+transition:.3s;
+}
+
+.pubg-btn:hover{
+transform:scale(1.1);
+
+box-shadow:
+0 0 25px #ff9800,
+0 0 50px #ff3d00;
+}
+
+@keyframes buttonGlow{
+
+0%{
+background-position:0% 50%;
+}
+
+50%{
+background-position:100% 50%;
+}
+
+100%{
+background-position:0% 50%;
+}
+
+}
+#morePUBG{
+display:none;
+}
