@@ -712,3 +712,76 @@ background-position:0% 50%;
 #morePUBG{
 display:none;
 }
+
+
+/* Hide extra Roblox guides */
+
+#moreRoblox{
+display:none;
+}
+
+/* Roblox Gaming Button */
+
+.roblox-btn{
+
+display:block;
+margin:50px auto;
+
+padding:18px 40px;
+
+font-size:22px;
+font-weight:bold;
+
+color:white;
+
+border:none;
+border-radius:50px;
+
+cursor:pointer;
+
+background:linear-gradient(
+270deg,
+#00e5ff,
+#0066ff,
+#7b2cff,
+#ff00c8
+);
+
+background-size:600% 600%;
+
+animation:
+robloxGlow 6s ease infinite;
+
+box-shadow:
+0 0 15px #00e5ff,
+0 0 30px #0066ff,
+0 0 50px #7b2cff;
+
+transition:all .3s ease;
+}
+
+.roblox-btn:hover{
+
+transform:translateY(-4px) scale(1.08);
+
+box-shadow:
+0 0 20px #00e5ff,
+0 0 40px #0066ff,
+0 0 70px #ff00c8;
+}
+
+@keyframes robloxGlow{
+
+0%{
+background-position:0% 50%;
+}
+
+50%{
+background-position:100% 50%;
+}
+
+100%{
+background-position:0% 50%;
+}
+
+}
