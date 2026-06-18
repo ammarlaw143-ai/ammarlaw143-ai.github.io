@@ -367,3 +367,32 @@ btn.innerHTML = "🎯 Show More PUBG Guides";
 }
 
 }
+
+function showMoreRoblox(){
+
+let section =
+document.getElementById("moreRoblox");
+
+let btn =
+document.getElementById("robloxBtn");
+
+if(
+section.style.display === "none" ||
+section.style.display === ""
+){
+
+section.style.display = "block";
+
+btn.innerHTML =
+"🔼 Hide Roblox Guides";
+
+}else{
+
+section.style.display = "none";
+
+btn.innerHTML =
+"🎮 Show More Roblox Guides";
+
+}
+
+}
